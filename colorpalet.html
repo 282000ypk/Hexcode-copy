@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Color Palet</title>
+	
+	<style type="text/css">
+		*
+		{
+			margin: 0px;
+			border: 0px;
+			box-sizing: border-box;
+		}
+		body
+		{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.container
+		{
+			display: flex;
+			justify-content: space-around;
+			align-content: center;
+			flex-wrap: wrap;
+			height: 100vh;
+			width: 100%;
+			background: #222;
+			padding: 20px;
+		}
+		.box
+		{
+			flex:  0 1 150px;
+			height: 150px;
+			display: flex;
+			justify-content: center;
+			align-content: center;
+			flex-flow: column;
+			margin: 10px;
+		}
+		.box-color
+		{
+			display: flex;
+			color: white;
+			height: 80%;
+			width: 100%;
+			align-items: flex-end;
+			text-align: center;
+			border: 2px solid white;
+		}
+		.box input
+		{
+			height: 20%;
+			background: white;
+			text-align: center;
+			transition: 1s;
+		}
+		.box input:focus
+		{
+			outline: none;
+			border: none;	
+		}
+		.notify
+		{
+			color: white;
+			opacity: 0;
+			position: fixed;
+			top: 10px;
+			font-size: 25px;
+			border: 2px solid white;
+			padding: 10px;
+		}
+		.show-notification
+		{
+			animation: show 2s linear forwards;
+		}
+		@keyframes show
+		{
+			0%
+			{
+				opacity: 0;
+			}
+			50%
+			{
+				opacity: 1;
+			}
+			100%
+			{
+				opacity: 0;
+			}
+		}
+
+	</style>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+</head>
+<body>
+		
+	<div class="notify">Hex code copied successfully</div>
+	<div class="container">
+		
+		
+		<div class="box">
+			<div class="box-color">
+				Click below to copy color code
+			</div>
+			<input type="text" value="" id="" onclick="copytoclip(this.id)">
+		</div>
+
+		<div class="box">
+			<div class="box-color">
+				Click below to copy color code
+			</div>
+			<input type="text" value="" id="" onclick="copytoclip(this.id)">
+		</div>
+
+		<div class="box">
+			<div class="box-color">
+				Click below to copy color code
+			</div>
+			<input type="text" value="" id="" onclick="copytoclip(this.id)">
+		</div>
+		<div class="box">
+			<div class="box-color">
+				Click below to copy color code
+			</div>
+			<input type="text" value="" id="" onclick="copytoclip(this.id)">
+		</div>
+		<div class="box">
+			<div class="box-color">
+				Click below to copy color code
+			</div>
+			<input type="text" value="" id="" onclick="copytoclip(this.id)">
+		</div>
+		<div class="box">
+			<div class="box-color">
+				Click below to copy color code
+			</div>
+			<input type="text" value="" id="" onclick="copytoclip(this.id)">
+		</div>
+		<div class="box">
+			<div class="box-color">
+				Click below to copy color code
+			</div>
+			<input type="text" value="" id="" onclick="copytoclip(this.id)">
+		</div>
+		<div class="box">
+			<div class="box-color">
+				Click below to copy color code
+			</div>
+			<input type="text" value="" id="" onclick="copytoclip(this.id)">
+		</div>
+		<div class="box">
+			<div class="box-color">
+				Click below to copy color code
+			</div>
+			<input type="text" value="" id="" onclick="copytoclip(this.id)">
+		</div>
+		<div class="box">
+			<div class="box-color">
+				Click below to copy color code
+			</div>
+			<input type="text" value="" id="" onclick="copytoclip(this.id)">
+		</div>
+		<div class="box">
+			<div class="box-color">
+				Click below to copy color code
+			</div>
+			<input type="text" value="" id="" onclick="copytoclip(this.id)">
+		</div>
+		<div class="box">
+			<div class="box-color">
+				Click below to copy color code
+			</div>
+			<input type="text" value="" id="" onclick="copytoclip(this.id)">
+		</div>
+		<div class="box">
+			<div class="box-color">
+				Click below to copy color code
+			</div>
+			<input type="text" value="" id="" onclick="copytoclip(this.id)">
+		</div>
+
+		<div class="box">
+			<div class="box-color">
+				Click below to copy color code
+			</div>
+			<input type="text" value="" id="" onclick="copytoclip(this.id)">
+		</div>
+		<div class="box">
+			<div class="box-color">
+				Click below to copy color code
+			</div>
+			<input type="text" value="" id="" onclick="copytoclip(this.id)">
+		</div>
+		<div class="box">
+			<div class="box-color">
+				Click below to copy color code
+			</div>
+			<input type="text" value="" id="" onclick="copytoclip(this.id)">
+		</div>
+		<div class="box">
+			<div class="box-color">
+				Click below to copy color code
+			</div>
+			<input type="text" value="" id="" onclick="copytoclip(this.id)">
+		</div>
+
+
+
+	</div>
+	
+</body>
+<script defer="">
+
+		const colors = ['#F17171', '#EE4D4D', '#D64545', '#FFA071', '#FF884D', '#E57A45', '#FFD071', '#FFC44D', '#E5B045', '#A2D471', '#BBC94D', '#7DB545', '#71E2D0', '#4DDBC4', '#45C5BO']
+
+		function addcolors()
+		{
+			container = document.querySelector(".container")
+			console.log(container)
+			let color = 0
+			var allbox = container.querySelectorAll(".box")
+			for(let i = 0; i < allbox.length;i++)
+			{
+				allbox[i].querySelector(".box-color").style.background = colors[color];
+				allbox[i].querySelector("input").value = colors[color];
+				allbox[i].querySelector("input").id = colors[color++];
+			}
+		}
+
+		addcolors()
+
+		function copytoclip(id)
+		{
+			var notification = document.querySelector(".notify");
+			notification.classList.remove("show-notification")
+			var text = document.getElementById(id)
+			text.select();
+			navigator.clipboard.writeText(text.value)
+			notification.classList.add("show-notification")
+		}
+
+	</script>
+</html>
